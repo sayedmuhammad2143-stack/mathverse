@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Lentera Belajar — semua mapel, kurikulum, lomba, dan ujian dengan mentor AI, latihan adaptif, dan kuis mingguan.">
+<meta name="theme-color" content="#4f46e5">
+<title>Lentera Belajar</title>
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-512.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Lentera">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<main id="gate" class="gate" hidden>
+  <section class="card gate-card">
+    <img src="icon-192.png" alt="" width="84" height="84" style="border-radius:1.2rem"><h1>Lentera Belajar</h1>
+    <p class="muted" data-t="pilih">Pilih siapa yang belajar.</p>
+    <div class="row">
+      <button class="btn big" data-user="zaki">🧒 Zaki</button>
+      <button class="btn big alt" data-user="ayek">🛡️ Ayek</button>
+    </div>
+    <form id="pinForm" hidden>
+      <label for="pin" id="pinLabel">PIN Ayek</label>
+      <input id="pin" type="password" inputmode="numeric" minlength="4" maxlength="8" autocomplete="off" required>
+      <button class="btn" type="submit">Masuk</button>
+      <p class="muted small">PIN hanya pagar ringan di perangkat ini, bukan keamanan sungguhan.</p>
+    </form>
+  </section>
+</main>
+
+<div id="app" hidden>
+  <header class="top">
+    <span class="brand"><img src="icon-192.png" alt="" width="28" height="28"><strong id="who"></strong></span>
+    <span id="streakPill" class="pill"></span>
+  </header>
+  <main id="view" tabindex="-1"></main>
+  <nav class="bar" aria-label="Menu utama">
+    <button data-tab="belajar"><span>📚</span><small data-t="belajar">Belajar</small></button>
+    <button data-tab="latihan"><span>✏️</span><small data-t="latihan">Latihan</small></button>
+    <button data-tab="mentor"><span>🧑‍🏫</span><small data-t="mentor">Mentor</small></button>
+    <button data-tab="aku"><span>🙂</span><small data-t="aku">Aku</small></button>
+  </nav>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
